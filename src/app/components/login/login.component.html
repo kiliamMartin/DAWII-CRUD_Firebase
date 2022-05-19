@@ -1,0 +1,18 @@
+<div class="login-container">
+    <form [formGroup]="form" (ngSubmit)="login()">
+        <img src="../../../assets/images/user.png" alt="">
+
+        <mat-form-field appearance="fill">
+            <mat-label>User</mat-label>
+            <input matInput formControlName="user">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="pass">
+        </mat-form-field>
+        <div class="example-button-row">
+            <button type="submit" mat-raised-button color="primary" [disabled]="form.invalid">Login</button>
+        </div>
+    </form>
+    
+</div>
