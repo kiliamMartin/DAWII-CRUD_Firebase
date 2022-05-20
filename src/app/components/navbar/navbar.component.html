@@ -1,7 +1,12 @@
 <mat-toolbar style="background-color:black; color:white" >
     <span>Employees Manager</span>
+    <div class="items">
+        <button routerLink="/list" mat-raised-button style="background-color:black; color: white; font-size:16px">
+            List of Employees</button>
+    </div>
     <div class="nav-items">
-        <button mat-raised-button style="background-color:black; color: white; font-size:16px">Logout</button>
+        <button routerLink="/logout" mat-raised-button style="background-color:black; color: white; font-size:16px">
+            <mat-icon>logout</mat-icon></button>
     </div>
 
 </mat-toolbar>

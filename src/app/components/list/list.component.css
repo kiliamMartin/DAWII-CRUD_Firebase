@@ -4,17 +4,7 @@ table {
   }
 
 
-main{
 
-  margin: 0 auto;
-  padding-bottom: 10rem;
-  width: 100%;
-  max-width: 1850px; 
-  margin-bottom: 10rem;
-
-  
-
-}
 .mat-form-field {
   margin: 0 auto;
   font-size: 14px;
@@ -44,6 +34,7 @@ main{
   border-radius: 100;
   width: 140px;
   height: 130px;
+  background-color: black;
 
 }
 
@@ -120,20 +111,39 @@ label{
 }
 
 .top-container button{
-    margin-right: 3rem;
-    margin-left: 3.3rem;
-    margin-top: 0.9rem;
+  
+ 
+
     padding: 5px 10px;
-    float: left;
+
     background-color: black;
 
     font-size: 18px;
 }
 
 .top-container{
+    width: 100%;
     margin-top: 2rem;
+    flex: 1 1 4rem;
    
 }
+
+.top-container button{
+    margin-left: 10rem;
+}
+
+
+
+mat-form-field{
+    width: 30%;
+}
+
+
+
+
+
+
+
 ::ng-deep .mat-focused .mat-form-field-label {
     /*change color of label*/
     color: black !important;

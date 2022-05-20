@@ -8,6 +8,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -22,7 +24,9 @@ import {MatIconModule} from '@angular/material/icon';
     ReactiveFormsModule,
     MatToolbarModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule,  
+    MatDialogModule  
     
     
   ],
@@ -34,7 +38,9 @@ import {MatIconModule} from '@angular/material/icon';
     ReactiveFormsModule,
     MatToolbarModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule,
+    MatDialogModule
   ]
 })
 export class SharedModule { }
