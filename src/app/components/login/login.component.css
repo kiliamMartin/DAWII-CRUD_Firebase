@@ -37,3 +37,6 @@ mat-form-field{
    /*change color of underline when focused*/
    background-color: black !important;;
   }
+  ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: #fff; 
+}

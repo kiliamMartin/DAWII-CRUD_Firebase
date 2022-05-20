@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "employees-bbbcf": {
+      "hosting": {
+        "employees-app": [
+          "employees-bbbcf"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "employees-bbbcf"
+  }
+}
