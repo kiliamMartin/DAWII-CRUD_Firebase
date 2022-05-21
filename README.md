@@ -1,27 +1,31 @@
-# EmployeesApp
+# CRUD_Firebase EmployeesApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+Esta práctica consiste en crear una aplicación en [Angular](https://angular.io/) que acceda a la información en una base de datos en [Firebase](https://firebase.google.com/) y realice las operaciones CRUD. La aplicación creada se trata de un administrador de empleados el cual consta de un simple logueo antes de mostrar a los empleados. 
+Para el almacenamiento de los empleados se ha usado Firestore.
+Para la estética de la apliación se ha hecho uso de [Angular Material](https://material.angular.io/).
+Además de las operaciones básicas CRUD, se puede filtrar un empleado por su nombre, apellido, correo, id o genero
 
-## Development server
+## Credenciales
+Para poder loguearse en el sitio web, se debe acceder con el siguiente usuario:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**user**:admin 
 
-## Code scaffolding
+**pass**:admin
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Despliegue del proyecto
 
-## Build
+Para el despliegue del proyecto se ha utilizado Vercel. [Enlace]()
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Antes de ejecutar el proyecto
 
-## Running unit tests
+1). Instalar npm `npm install -g npm` y [Node.js 16.14.2 LTS](https://nodejs.org/es/download/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2). Instalar Angular CLI `npm install -g @angular/cli`
 
-## Running end-to-end tests
+## Ejecutar el proyecto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1). Entrar en la carpeta del proyecto
 
-## Further help
+1). Ejecutar `npm install`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2). Por último arrancar el servidor `ng serve --open`
