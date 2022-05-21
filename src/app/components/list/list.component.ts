@@ -27,9 +27,6 @@ export class ListComponent implements OnInit {
     this.employeeService.getEmployees().subscribe(data =>  {
       this.employees = []
       data.forEach((element:any) => {
-        //console.log(element);
-        // console.log(element.payload.doc.id)    
-        // console.log(element.payload.doc.data())
         this.employees.push({
           id: element.payload.doc.id,
           avatar: '',
@@ -97,7 +94,7 @@ export class ListComponent implements OnInit {
       
       
       );
-     console.log(event.key)
+
     
      
      
