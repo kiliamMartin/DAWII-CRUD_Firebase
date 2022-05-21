@@ -7,7 +7,7 @@
                 <mat-form-field appearance="standard">
                 
                     <mat-label>Search</mat-label>
-                    <input matInput (keyup)="onSearch($event)" placeholder="ex: Marilola Dolores Afonso" #input style="border-color: aqua;">
+                    <input matInput (keyup)="onSearch($event)" placeholder="by Name, Email, Id or Genre" #input style="border-color: aqua;">
           
                   </mat-form-field>
             
@@ -18,8 +18,11 @@
                   
             
         </div><br>
-        
-          <div class="card" *ngFor="let e of employees">
+          <div class="no-employees" *ngIf="employees.length < 1">
+                <h1>Any employees to show</h1>
+          </div>
+          
+          <div class="card" *ngFor="let e of employees" >
               <mat-card class="example-card">
                   <mat-card-header>
                     
@@ -37,14 +40,12 @@
                     <label for="">{{e.email}}</label><br>
                     <label class="label" for=""><b>Gender:</b></label>
                     <label for="">{{e.gender}}</label><br>
-           
-                   
                     
                   <div class="btn-container">
-                    <button mat-fab id="delete-bt" aria-label="Example icon button with a delete icon">
-                        <mat-icon (click)="openDeleteDialog(e.id)" >delete</mat-icon>
+                    <button (click)="openDeleteDialog(e.id)"  mat-fab id="delete-bt" aria-label="Example icon button with a delete icon">
+                        <mat-icon>delete</mat-icon>
                       </button>
-                      <button routerLink="/list/edit-employee" mat-fab id="edit-bt" aria-label="Example icon button with a delete icon">
+                      <button [routerLink]="['/list/edit-employee/', e.id]" mat-fab id="edit-bt" aria-label="Example icon button with a delete icon">
                         <mat-icon>edit</mat-icon>
                       </button>
                   </div>

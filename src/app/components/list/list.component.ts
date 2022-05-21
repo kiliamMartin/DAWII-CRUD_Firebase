@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ToastrService } from 'ngx-toastr';
 import { EmployeeService } from 'src/app/services/employee.service';
 import { DeleteDialogComponent } from '../dialogs/delete-dialog/delete-dialog.component';
 
@@ -10,8 +11,9 @@ import { DeleteDialogComponent } from '../dialogs/delete-dialog/delete-dialog.co
 })
 export class ListComponent implements OnInit {
   employees: any[] = []
+  
 
-  constructor(private dialog: MatDialog, private employeeService: EmployeeService) {
+  constructor(private dialog: MatDialog, private employeeService: EmployeeService, private toastr: ToastrService) {
 
   }
 
@@ -19,9 +21,7 @@ export class ListComponent implements OnInit {
     this.getEmployees()
   }
 
-  onSearch(event : KeyboardEvent){
 
-  }
 
   getEmployees(){
     this.employeeService.getEmployees().subscribe(data =>  {
@@ -37,19 +37,21 @@ export class ListComponent implements OnInit {
         })
        
       });
+
       this.setAvatar();
-      console.log(this.employees)
     })
   }
 
 
   deleteEmployee(id:string){
     this.employeeService.deleteEmployee(id).then(() => {
-      console.log("deleted")
+      this.toastr.error('Employee was deleted succesfully!','Deleted employee')
     }).catch(error => {
       console.log(error)
     })
   }
+
+
 
 
 
@@ -71,14 +73,34 @@ export class ListComponent implements OnInit {
         case "delete":
           this.deleteEmployee(id)
           break
-        
         default:
-          console.log("undefined")
           break
          
       }
       
     });
   }
+
+
+  onSearch(event: KeyboardEvent) {
+    var filterValue = (event.target as HTMLInputElement).value;
+     
+     if(filterValue === "") {this.ngOnInit()}
+     if(event.key =="Backspace") { }
+     this.employees =this.employees.filter(e => 
+      e['first_name'].toLowerCase().indexOf(filterValue.toLowerCase()) !== -1 ||
+      e['last_name'].toLowerCase().indexOf(filterValue.toLowerCase()) !== -1 ||
+      e['email'].toLowerCase().indexOf(filterValue.toLowerCase()) !== -1 ||
+      e['id'].toLowerCase().indexOf(filterValue.toLowerCase()) !== -1 ||
+      e['gender'].toLowerCase().indexOf(filterValue.toLowerCase()) !== -1
+      
+      
+      
+      );
+     console.log(event.key)
+    
+     
+     
+   }
 
 }

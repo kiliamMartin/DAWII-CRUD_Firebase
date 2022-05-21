@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     const user = this.form.value.user;
     const pass = this.form.value.pass;
     
-    if(user == "admin" && pass == "1234"){
+    if(user == "admin" && pass == "admin"){
       this.router.navigate(['list'])
     }else{
       this.errorHandling()

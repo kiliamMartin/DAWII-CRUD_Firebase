@@ -35,7 +35,7 @@ export class NewEmployeeComponent implements OnInit {
     this.submited = true;
 
     if(this.newEmployee.invalid){
-      alert("Except Last_name, all fields are required!")
+      alert("Except Last name, all fields are required!")
       return;
     }
 
@@ -55,10 +55,7 @@ export class NewEmployeeComponent implements OnInit {
     }).catch(error => {
       console.log(error)
     })
-
-
-
-    console.log(employee)
+    
   }
 
 }

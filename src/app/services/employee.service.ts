@@ -16,7 +16,6 @@ export class EmployeeService {
   }
 
   getEmployees(): Observable<any>{
-    console.log(this.firestore.collection("Employees"))
     return this.firestore.collection("Employees", ref => ref.orderBy('createdAt', 'desc')).snapshotChanges();
     
 
@@ -25,5 +24,13 @@ export class EmployeeService {
   deleteEmployee(id:string): Promise<any> {
     return this.firestore.collection("Employees").doc(id).delete()
 
+  }
+
+  getAnEmployee(id: string): Observable<any>{
+    return this.firestore.collection("Employees").doc(id).snapshotChanges();
+  }
+
+  updateAnEmployee(id:string, data:string): Promise<any>{
+    return this.firestore.collection("Employees").doc(id).update(data);
   }
 }

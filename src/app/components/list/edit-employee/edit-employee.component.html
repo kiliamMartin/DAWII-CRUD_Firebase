@@ -1,35 +1,36 @@
 <app-navbar></app-navbar>
 <main>
 
-    <div class="newEmployee-container">
-        <form action="">
-            <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>First Name</mat-label>
-                <input matInput placeholder="" value="" required>
-              </mat-form-field><br>
-              <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Last Name</mat-label>
-                <input matInput placeholder="" value="" >
-              </mat-form-field><br>
-              <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Email</mat-label>
-                <input matInput placeholder="" value="" required>
-              </mat-form-field><br>
-              <mat-form-field appearance="fill">
-                <mat-label>Gender</mat-label>
-                <mat-select>
-                  <mat-option value="male">Male</mat-option>
-                  <mat-option value="female">Female</mat-option>
-                </mat-select>
-              </mat-form-field><br>
-              <div class="bt-containers">
-                <button routerLink="/list" mat-raised-button >
-                    SAVE</button>
-              </div>
+  <div class="newEmployee-container">
+    <form action="" [formGroup]="modEmployee" (ngSubmit)="editEmployee()">
+        <mat-form-field class="example-full-width" appearance="fill" >
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="" value="" required formControlName="first_name">
+          </mat-form-field><br>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="" value="" formControlName="last_name">
+          </mat-form-field><br>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="" value=""email="true" required formControlName="email">
+          </mat-form-field><br>
+          <mat-form-field appearance="fill">
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender">
+              <mat-option value="Male" >Male</mat-option>
+              <mat-option value="Female">Female</mat-option>
+            </mat-select>
+          </mat-form-field><br>
+          <div class="bt-containers">
+            <button type="submit"  mat-raised-button >
+                SAVE</button>
+          </div>
 
-        </form>
-        
-    </div>
+    </form>
+    
+</div>
+
 
 
 
