@@ -44,7 +44,7 @@ export class NewEmployeeComponent implements OnInit {
       last_name : this.newEmployee.value.last_name,
       email : this.newEmployee.value.email,
       gender : this.newEmployee.value.gender,
-      id: this.employeeService.generateId()
+      createdAt: new Date()
       
     };
 

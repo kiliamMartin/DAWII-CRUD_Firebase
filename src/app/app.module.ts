@@ -35,7 +35,7 @@ import { ToastrModule } from 'ngx-toastr';
   declarations: [
     AppComponent,
     LoginComponent,
-    DeleteDialogComponent,
+    
     
   ],
   imports: [

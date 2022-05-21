@@ -19,31 +19,30 @@
             
         </div><br>
         
-          <div class="card" *ngFor="let g of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]">
+          <div class="card" *ngFor="let e of employees">
               <mat-card class="example-card">
-                  
-                 
                   <mat-card-header>
                     
-                    <div class="avatar" mat-card-avatar [ngStyle]="{'background-image': 'url(assets/images/female.png)','background-position': 'center','background-size': '100% 100%'}">
+                    <div class="avatar" mat-card-avatar [ngStyle]="{'background-image': 'url('+ e.avatar +')','background-position': 'center','background-size': '100% 100%'}">
                     </div>
 
                   </mat-card-header>
                     <label class="label" for=""><b>Id:</b></label>
-                    <label for="">1</label><br>
+                    <label for="">{{e.id}}</label><br>
                     <label class="label" for=""><b>First Name:</b></label>
-                    <label for="">Rosa María Violeta</label><br>
+                    <label for="">{{e.first_name}}</label><br>
                     <label class="label" for=""><b>Last Name:</b></label>
-                    <label for="">Bautista  Harris</label><br>
+                    <label for="">{{e.last_name}}</label><br>
                     <label class="label" for=""><b>Email:</b></label>
-                    <label for="">violetaguapita@gmail.com</label><br>
+                    <label for="">{{e.email}}</label><br>
                     <label class="label" for=""><b>Gender:</b></label>
-                    <label for="">Female</label><br>
+                    <label for="">{{e.gender}}</label><br>
+           
                    
                     
                   <div class="btn-container">
                     <button mat-fab id="delete-bt" aria-label="Example icon button with a delete icon">
-                        <mat-icon (click)="openDeleteDialog()" >delete</mat-icon>
+                        <mat-icon (click)="openDeleteDialog(e.id)" >delete</mat-icon>
                       </button>
                       <button routerLink="/list/edit-employee" mat-fab id="edit-bt" aria-label="Example icon button with a delete icon">
                         <mat-icon>edit</mat-icon>
