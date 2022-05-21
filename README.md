@@ -8,7 +8,7 @@ Además de las operaciones básicas CRUD, se puede filtrar un empleado por su no
 ## Credenciales
 Para poder loguearse en el sitio web, se debe acceder con el siguiente usuario:
 
-**user**:admin
+**user**:admin \n
 **pass**:admin
 
 ## Despliegue del proyecto
