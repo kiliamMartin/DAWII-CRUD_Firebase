@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 import { SharedModule } from './components/shared/shared.module';
-import { DeleteDialogComponent } from './components/dialogs/delete-dialog/delete-dialog.component';
+import { DeleteDialogComponent } from './components/list/dialogs/delete-dialog/delete-dialog.component';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';

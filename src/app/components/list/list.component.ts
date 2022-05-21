@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
 import { EmployeeService } from 'src/app/services/employee.service';
-import { DeleteDialogComponent } from '../dialogs/delete-dialog/delete-dialog.component';
+import { DeleteDialogComponent } from './dialogs/delete-dialog/delete-dialog.component';
 
 @Component({
   selector: 'app-list',

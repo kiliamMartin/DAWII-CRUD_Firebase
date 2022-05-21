@@ -7,7 +7,7 @@ import { ListComponent } from './list.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { NewEmployeeComponent } from './new-employee/new-employee.component';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
-import { DeleteDialogComponent } from '../dialogs/delete-dialog/delete-dialog.component';
+import { DeleteDialogComponent } from './dialogs/delete-dialog/delete-dialog.component';
 
 
 @NgModule({
